@@ -759,3 +759,33 @@ h4 {
     height: 36px;
     background-color: white;
 }
+
+/* small phones, tablets, large smartphones */
+
+@media (max-width: 768px) {
+    nav {
+        height: 68px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    button {
+        font-size: 18px;
+    }
+}
+
+
+
+/* small phones, large smartphones */
+
+@media(max-width:550px) {
+    .btn__menu {
+        display: block;
+    }
+    .nav__links {
+        display: none;
+    }
+}
