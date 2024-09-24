@@ -766,6 +766,16 @@ h4 {
     nav {
         height: 68px;
     }
+    header {
+        flex-direction: column;
+    }
+    .inner-flex-container{
+        flex-direction: column;
+    }
+    img{
+        width: 50%;
+        height: 50%;
+    }
     h1 {
         font-size: 40px;
     }
@@ -775,6 +785,12 @@ h4 {
     button {
         font-size: 18px;
     }
+    .btn__menu {
+        display: block;
+    }
+    .nav__links {
+        display: none;
+    }
 }
 
 
@@ -782,10 +798,14 @@ h4 {
 /* small phones, large smartphones */
 
 @media(max-width:550px) {
-    .btn__menu {
-        display: block;
+    img {
+    width: 25%;
+    height: 25%;
     }
-    .nav__links {
-        display: none;
+    nav {
+        height: 48px;
+    }
+h1 {
+    font-size: 28px;
     }
 }
