@@ -568,21 +568,38 @@ Pricing
     border: 2px solid rgb(226, 232, 240);
     border-radius: 8px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     position: relative;
     margin: 18px;
 }
 
+.main__feature {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.main__feature--middle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .feature {
     display: flex;
+    justify-content: center;
     text-align: center;
     padding-top: 20px;
 }
 
 .btn__1 {
-    margin:28px;
+    width: 50%;
+    margin:28px 20px 28px 56px;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
 
@@ -595,9 +612,11 @@ Pricing
 }
 
 .btn__2 {
-    margin: 28px;
+    width: 50%;
+    margin: 28px 0 28px 56px;
     display: flex;
     justify-content: center;
+    text-align: center;
     background-color: white;
     color:rgb(100 21 255 );
 }
@@ -608,9 +627,11 @@ Pricing
 }
 
 .btn__3 {
-    margin: 28px;
+    width: 50%;
+    margin: 28px 0 28px 56px;
     display: flex;
     justify-content: center;
+    text-align: center;
    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
 
@@ -829,6 +850,7 @@ h3 {
 
 .footer__logo {
     display: flex;
+    margin-left: 24px;
     width: 50px;
 }
 
@@ -838,16 +860,16 @@ h4 {
     text-align: center;
 }
 
-.logo__container {
-    display: flex;
-}
-
 .footer__copyright {
+    margin-bottom: 60px;
+    padding-bottom: 48px;
     display: flex;
     justify-content: center;
-    padding: 48px;
-    margin: 24px;
     color: white;
+}
+
+.logo__container {
+
 }
 
 .social__links {
@@ -856,8 +878,6 @@ h4 {
 }
 
 .social__link {
-    display: flex;
-    justify-content: center;
     padding-right:12px;
     border: 2px solid rgb(100 21 255);
     border-radius: 20px;
@@ -884,19 +904,35 @@ img {
         flex-direction: column;
         padding: 14px;
     }
-}
-
-@media (max-width: 768px) {
-    nav {
-        height: 68px;
-        margin-bottom: 40px;
+    .btn__menu {
+        padding-top: 12px;
+        display: block;
+    }
+    .nav__links {
+        display: none;
     }
     header {
         flex-direction: column;
-        padding: 12px;
+        padding: 24px;
+        margin: 2px;
     }
+    nav {
+        height: 68px;
+        margin-bottom: 40px;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+   
     .inner-flex-container{
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .steps__img {
+        align-self: center;
     }
     .customers__logo {
         max-width: 50%;
@@ -920,12 +956,6 @@ img {
     button {
         font-size: 18px;
     }
-    .btn__menu {
-        display: block;
-    }
-    .nav__links {
-        display: none;
-    }
     .plans__wrapper {
         display: flex;
         flex-direction: column;
@@ -934,6 +964,10 @@ img {
 
     .plans {
         margin:18px 0 18px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .plans__middle {
@@ -977,16 +1011,40 @@ img {
         display: flex;
         flex-direction: column;
         width: 50%;
-        margin-left: 48px;
-    }
+        margin-left: 140px;
 
-    .inner-flex-container {
-        margin-left: 48px;
     }
 
     .testimony__header {
         display: flex;
         flex-direction: column;
+    }
+    .btn__1 {
+        width: 75%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 12px;
+    }
+    .btn__2 {
+        width: 75%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 12px;
+    }
+    .btn__3 {
+        width: 75%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 12px;
     }
 }
 
