@@ -13,7 +13,7 @@ html {
 .row {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 nav {
@@ -124,6 +124,27 @@ li {
     color: white;
 }
 
+header {
+    height:calc(100vh - 70px);
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.header__img {
+   width: 100%;
+    position:relative;
+}
+
+.header__text {
+    font-size: 48px;
+    text-align: left;
+    margin-top: 24px;
+}
+
 
 img {
     width: 100%;
@@ -143,28 +164,7 @@ img {
     width: 50%;
 }
 
-header {
-    height:calc(100vh - 70px);
-    width: 100%;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
 
-
-.header__img {
-   width: 100%;
-    position:relative;
-
-}
-
-.header__text {
-    font-size: 48px;
-    text-align: left;
-    margin-top: 24px;
-}
 
 
 h1 {
@@ -735,6 +735,7 @@ padding-left: 64px;
 
 .stars {
     color:rgb(246 173 85);
+    padding-bottom: 24px;
 }
 
 /*
@@ -860,21 +861,24 @@ h4 {
     text-align: center;
 }
 
-.footer__copyright {
-    margin-bottom: 60px;
-    padding-bottom: 48px;
-    display: flex;
-    justify-content: center;
-    color: white;
+#footer {
+    padding-bottom: 32px;
 }
 
-.logo__container {
+.footer__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.footer__copyright {
+    color: white;
 }
 
 .social__links {
     display: flex;
     justify-content: center;
+    padding-right: 60px;
 }
 
 .social__link {
@@ -897,11 +901,10 @@ img {
 .input__btn{
         display: flex;
         justify-content: center;
-        align-items: left;
+        margin-left: auto;
+        margin-right: auto;
     }
     .email__btn {
-        display: flex;
-        flex-direction: column;
         padding: 14px;
     }
     .btn__menu {
@@ -921,6 +924,30 @@ img {
         margin-bottom: 40px;
         padding: 24px;
     }
+    .footer__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__copyright {
+       padding: 0 12px 12px 48px;
+    }
+    .footer__logo {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .social__links {
+        padding-left: 60px;
+        margin-left: 60px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -935,12 +962,17 @@ img {
         align-self: center;
     }
     .customers__logo {
-        max-width: 50%;
+        max-width: 100%;
+        height: 100%;
+        align-self: center;
+    }
+    .header__img {
+        padding-top: 12px;
     }
     .service__wrapper {
         display: flex;
         flex-direction: column;
-        margin-left: 60px;
+        margin-left: 48px;
         align-items: center;
     }
     img{
@@ -956,14 +988,16 @@ img {
     button {
         font-size: 18px;
     }
+    .pricing {
+        text-align: c;
+    }
     .plans__wrapper {
         display: flex;
         flex-direction: column;
         max-width: 50%;
     }
-
     .plans {
-        margin:18px 0 18px 80px;
+        margin:18px 12px 18px 28px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -971,10 +1005,16 @@ img {
     }
 
     .plans__middle {
-        margin:18px 0 18px 80px;
+        margin:18px 0 18px 28px;
+    }
+    .header__text {
+        text-align: center;
     }
     .value__wrapper {
         font-size: 14px;
+    }
+    .value__text--header {
+        text-align: center;
     }
 
     .values__img {
@@ -998,10 +1038,6 @@ img {
         flex-wrap: wrap;
         text-align: center;
     }
-    .footer__row {
-        display: flex;
-        flex-direction: column;
-    }
 
     .get__started--link {
         margin-bottom: 12px;
@@ -1010,14 +1046,26 @@ img {
     .quality__header {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 50%;
-        margin-left: 140px;
-
+    }
+    .quality__text {
+        text-align: center;
     }
 
     .testimony__header {
         display: flex;
         flex-direction: column;
+    }
+    .testimony__text {
+        text-align: center;
+    }
+    .testimony__wrapper {
+        padding-right: 64px;
+    }
+    .customer__wrapper {
+        display: flex;
+        justify-content: center;
     }
     .btn__1 {
         width: 75%;
@@ -1054,8 +1102,6 @@ img {
 
 @media(max-width:550px) {
     img {
-        display: flex;
-        flex-direction: column;
         width: 100%;
         height: 100%;
     }
@@ -1064,9 +1110,6 @@ img {
     }
     nav {
         height: 48px;
-    }
-    .customers__logo {
-        max-width: 100%;
     }
 h1 {
     font-size: 28px;
